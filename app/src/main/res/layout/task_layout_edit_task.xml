@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_layout_edit_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/task_layout_edit_show_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:boxStrokeColor="@color/singInButton"
+            app:hintTextColor="@color/singInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_show_edit_title" />
+
+        <TextView
+            android:id="@+id/task_layout_edit_show_edit_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:boxStrokeColor="@color/singInButton"
+            app:hintTextColor="@color/singInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_show_edit_title"
+            tools:text="Description" />
+
+        <TextView
+            android:id="@+id/task_layout_edit_show_edit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_show_edit_description"
+            tools:text="Time" />
+
+        <TextView
+            android:id="@+id/task_layout_edit_show_edit_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_show_edit_time"
+            tools:text="Date" />
+
+        <TextView
+            android:id="@+id/task_layout_edit_show_edit_task_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_show_edit_date"
+            tools:text="TaskStatus" />
+
+        <ImageView
+            android:id="@+id/task_layout_edit_show_edit_image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_show_edit_task_status" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_show_edit_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_shape"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/task_layout_edit_show_edit_share_button"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_layout_edit_show_edit_image_view"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_show_edit_share_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Share"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/task_layout_edit_show_edit_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/task_layout_edit_show_edit_delete_button"
+            app:layout_constraintTop_toTopOf="@+id/task_layout_edit_show_edit_delete_button"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_show_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/task_layout_edit_show_edit_share_button"
+            app:layout_constraintTop_toTopOf="@+id/task_layout_edit_show_edit_share_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_layout_edit_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/task_layout_edit_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_edit_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/task_layout_edit_edit_description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/task_layout_edit_edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="Description" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_edit_date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/lightBlue"
+            android:text="data picker"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_edit_description_layout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_edit_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:text="time picker"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_edit_date_picker" />
+
+        <RadioGroup
+            android:id="@+id/task_layout_edit_edit_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checkedButton="@id/task_layout_edit_edit_todo_radio_button"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_layout_edit_edit_time_picker">
+
+            <RadioButton
+                android:id="@+id/task_layout_edit_edit_todo_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_selector"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:text="Todo"
+                android:textColor="@drawable/radio_button_selector_text"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/task_layout_edit_edit_doing_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_selector"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:text="Doing"
+                android:textColor="@drawable/radio_button_selector_text"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/task_layout_edit_edit_done_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_selector"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:text="Done"
+                android:textColor="@drawable/radio_button_selector_text"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_edit_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_shape"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green"
+            app:layout_constraintEnd_toStartOf="@+id/task_layout_edit_edit_picture_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_layout_edit_edit_radioGroup" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_edit_picture_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green"
+            app:layout_constraintEnd_toStartOf="@+id/task_layout_edit_edit_save_button"
+            app:layout_constraintStart_toEndOf="@+id/task_layout_edit_edit_cancel_button"
+            app:layout_constraintTop_toTopOf="@+id/task_layout_edit_edit_cancel_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_edit_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/task_layout_edit_edit_picture_button"
+            app:layout_constraintTop_toTopOf="@id/task_layout_edit_edit_picture_button"
+            tools:layout_editor_absoluteY="289dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_layout_edit_picture_selection"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_picture_selection_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/singInButton"
+            android:text="Gallery"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@+id/task_layout_edit_picture_selection_camera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_layout_edit_picture_selection_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/singInButton"
+            android:text="Camera"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/task_layout_edit_picture_selection_gallery"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

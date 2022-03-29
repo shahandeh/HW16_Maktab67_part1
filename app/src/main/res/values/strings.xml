@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HW16_Maktab67_part1</string>
+    <string name="sign_in">Sign in</string>
+    <string name="to_continue_to_app">to continue to App</string>
+    <string name="name">name</string>
+    <string name="username">username</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="create_account">Create account</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_your_app_account">Create your App Account</string>
+    <string name="cancel">cancel</string>
+    <string name="start">start</string>
+    <string name="back">Back</string>
+    <string name="add">add</string>
+    <string name="break_line">break line</string>
+</resources>
